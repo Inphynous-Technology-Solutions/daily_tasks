@@ -1,0 +1,196 @@
+<html>
+<head>
+    <link rel="stylesheet" href="WelCome.html">
+    <title>Registration Form</title>
+    <style>
+        .container {
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.516);
+            width: 800px;
+            padding: 16px;
+            border-radius: 30px;
+
+        }
+
+        .container3 input {
+            background-color: #ff0000;
+            color: white;
+            border-radius: 10px;
+            padding: 10px;
+            width: 70px;
+        }
+
+        .container select {
+            width: 200px;
+
+        }
+
+        body {
+            background-color: #f0d4b2;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        h1 {
+            background-color: black;
+            color: rgb(245, 245, 126);
+            text-align: center;
+        }
+
+
+
+        .fnamee input {
+            background-color: rgb(222, 210, 210);
+            margin: 5px 0;
+            padding: 6px;
+            border: 1px solid #00FF00;
+            border-radius: 20px
+        }
+
+        .Lnamee input {
+            background-color: rgb(222, 210, 210);
+            margin: 5px 0;
+            padding: 6px;
+            border: 1px solid #00FF00;
+            border-radius: 20px
+        }
+
+        .comapny1 input {
+            background-color: rgb(222, 210, 210);
+            margin: 5px 0;
+            padding: 6px;
+            border: 1px solid #00FF00;
+            border-radius: 20px
+        }
+
+        .email2 input {
+            background-color: rgb(222, 210, 210);
+            margin: 5px 0;
+            padding: 6px;
+            border: 1px solid #00FF00;
+            border-radius: 20px
+        }
+
+        .phn input {
+            background-color: rgb(222, 210, 210);
+            margin: 5px 0;
+
+            padding: 6px;
+            border: 1px solid #00FF00;
+            border-radius: 20px
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <form action="#" name="myform" onsubmit="return_ValidateForm()" method="post">
+
+            <h1>Event Registration Form</h1>
+            <div class="grid-container">
+
+                <label for="Fname">Name</label>
+                <div class="fnamee">
+                    <input type="text" name="Fname" placeholder="First Name">
+                </div>
+
+
+
+                <div class="Lnamee">
+                    <input type="text" name="Lname" placeholder="Last Name"><br><br>
+                </div>
+
+
+                <div class="comapny1">
+                    <label for="Comapny">Comapny</label>
+                    <input type="text" name="Cname">
+                </div><br><br>
+
+                <div class="email2">
+                    <label for="email">Email</label>
+                    <input type="email" name="Email" placeholder="example@gmail.com">
+                </div><br><br>
+
+                <div class="phn">
+                    <label for="Phone">Phone</label>
+                    <input type="number" name="Fphone" placeholder="Enter Phone Number">
+                </div><br><br>
+
+                <label for="Subject">Subject</label>
+                <select name="" id="" required>
+                    <option selected disabled>select option</option>
+                    <option value="">Marathi</option>
+                    <option value="">English</option>
+                    <option value="">hindi</option>
+                    <option value="">Marathi</option>
+                </select><br><br>
+
+
+                <p>Are you an existing customer?</p>
+                <input type="radio" name="yes" id="yes" value="Yes">
+                <label for="Yes">Yes</label><br>
+                <input type="radio" name="No" id="No" value="No">
+                <label for="No">No</label>
+                <br><br>
+                <div class="container3">
+                    <input type="submit" value="Register" onClick="myFunction()" />
+                </div>
+
+
+            </div>
+            <script>
+                function return_ValidateForm() {
+                    let x = document.forms["myform"]["Fname"].value;
+                    if (x == "") {
+                        alert("First Name must be filled out");
+                        return false;
+                    }
+
+                    let y = document.forms["myform"]["Lname"].value;
+                    if (y == "") {
+                        alert("Last Name must be filled out");
+                        return false;
+                    }
+
+                    let z = document.forms["myform"]["Email"].value;
+                    z = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                    if (inputText.value.match(z)) {
+
+                        return true;
+                    }
+                    else {
+                        return false;
+                    }
+
+                    let p = document.forms["myform"]["Fphone"].value;
+                    if (p.length < 10) {
+                        alert("Phone Number Must be 10 digit");
+                        return false;
+                    }
+
+
+
+
+
+
+
+
+
+                }
+                // function myFunction() {
+                //     alert("The form submitted Succesfully");
+
+                //     window.location.href = "WelCome.html";
+                // }
+
+
+            </script>
+
+
+        </form>
+</body>
+
+</html>

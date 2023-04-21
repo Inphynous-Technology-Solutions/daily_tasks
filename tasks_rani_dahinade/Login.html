@@ -1,0 +1,171 @@
+<html>
+
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="WelCome.html">
+    <link rel="stylesheet" href="Reg.html">
+    <style>
+        button {
+
+            color: white;
+            background-color: black;
+        }
+
+        body {
+            /* background-color: blue; */
+            background-image: url(Cup.jpg);
+        }
+
+        h1 {
+
+            color: white;
+            text-align: center;
+        }
+
+        h5 {
+            text-align: center;
+            color: white;
+        }
+
+        input {
+            text-align: center;
+            background-color: black;
+            color: white;
+            height: 50px;
+        }
+
+        .container1 {
+            margin: auto;
+            width: 400px;
+        }
+
+        .container1 input {
+            width: 400px;
+            margin: 10px 0;
+            padding: 6px;
+            border: 1px solid #00FF00;
+            border-radius: 20px
+        }
+
+        .sub input {
+            width: 50%;
+            margin: 10px 0;
+            padding: 6px;
+            border: 1px solid #00FF00;
+            border-radius: 20px
+        }
+
+        .sub{
+           margin-left: 30%;
+           margin-right: 30%;
+            width: 500px;
+        }
+
+        .First {
+            margin: auto;
+            background-color: white;
+            width: 600px;
+            padding: 16px;
+            border-radius: 30px
+        }
+
+        a {
+
+            text-align: center;
+            color: white;
+            display: block;
+
+        }
+
+        p {
+            padding: 5px;
+            margin: 5px;
+            color: aliceblue;
+            text-align: center;
+        }
+
+        .check span{
+            color: rgb(232, 240, 247);
+            width: auto;
+            display: block;
+        }
+        .check input{
+            width: 15px;
+        }
+
+        
+    </style>
+
+</head>
+
+<body>
+
+    <div class="First">
+        <form action="WelCome.html" style="background-color: black; " name="myform" onsubmit="validation_Form()" method="post">
+            <h1>LOGIN</h1>
+            <h5>Enter your login and password!</h5>
+            <div class="container1">
+
+                <input type="text" name="uname" placeholder="username" 
+                    style="background-color: black;align-items: center;border: 2px solid #ff00d9">
+
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password"  name="pass" placeholder="password" 
+                    style="background-color: black;border: 2px solid #ff00d9"><br><br>
+            </div>
+            <div class="check">
+            <input type="checkbox" onclick="myFunction()"><span>Show Password</span>
+            
+               </div>
+
+               <a href="First.html">Forgot Password?</a>
+
+            <div class="sub">
+                <input type="submit" value="Login" onClick="myFunction()">
+            </div>
+
+            <p class="acc">Don't have an account <a href="Reg.html">Sign-Up Here</a></p>
+    </div>
+
+
+    
+
+            <script>
+              
+
+                function validation_Form() {
+                    let x = document.forms["myform"]["uname"].value;
+                    if (x == "") {
+                        alert("User Name must be filled out");
+                        return false;
+                    }
+
+                    let y = document.forms["myform"]["pass"].value;
+                    if (y.length <= 6) {
+                        alert("Password must contain at least 6 digit");
+                        return false;
+                    }
+
+                    
+                    
+                }
+
+                myInput.onfocus = function () {
+                    document.getElementById("Password here").style.display = "block";
+                }
+
+                
+
+
+            </script>
+
+            
+
+
+
+
+
+    </form>
+</body>
+
+</html>
