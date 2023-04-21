@@ -1,12 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .myDiv {
+            width: 1000px;
+            height: 1000px;
+            background-color: red;
+            margin: auto;
+        }
+
+        .myDiv p {
+            font-size: 48px;
+        }
+
+
+        .product {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 10px;
+            padding: 50px 10px;
+        }
+        .products{
+            padding: 26px;
+        }
+
+        .product1 {
+            background-color: red;
+        }
+
+        .product2 {
+            background-color: yellow;
+        }
+
+        @media only screen and (max-width:1280px) {
+            .myDiv {
+                width: 800px;
+                height: 800px;
+                background-color: green;
+                margin: auto;
+            }
+        }
+
+        @media only screen and (max-width:1080px) {
+            .myDiv {
+                width: 700px;
+                height: 700px;
+                background-color: gray;
+                margin: auto;
+            }
+
+            .myDiv p {
+                font-size: 36px;
+            }
+        }
+
+        @media only screen and (max-width:860px) {
+            .myDiv {
+                width: 500px;
+                height: 500px;
+                background-color: yellow;
+                margin: auto;
+            }
+
+            .myDiv p {
+                font-size: 32px;
+            }
+
+            .product {
+                display: block;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    
+    <h1>This is my first page</h1>
+
+
+    <input type="file" value="Select file">
+
+
+
+    <div class="myDiv">
+        <p>Lorem        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                               ipsum dolor, sit amet consectetur adipisicing elit. Odit iste perspiciatis magni, mollitia reiciendis,
+            eos, porro accusantium voluptatum consequatur id asperiores? Nisi temporibus facere natus doloribus. Esse
+            qui debitis voluptatibus!
+
+        </p>
+        <p>&#128512;&#128512;&#128512;&#128512;&#128512;&#128512;&#128512;&#128512;</p>
+    </div>
+    <div class="product">
+        <div class="products product1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptatem soluta amet dolor unde
+                veritatis cupiditate harum ducimus obcaecati iste assumenda nemo doloribus incidunt asperiores,
+                temporibus, repudiandae natus. Sapiente, eveniet?</p>
+        </div>
+        <div class="products product2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptatem soluta amet dolor unde
+                veritatis cupiditate harum ducimus obcaecati iste assumenda nemo doloribus incidunt asperiores,
+                temporibus, repudiandae natus. Sapiente, eveniet?</p>
+        </div>
+        <div class="products product1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptatem soluta amet dolor unde
+                veritatis cupiditate harum ducimus obcaecati iste assumenda nemo doloribus incidunt asperiores,
+                temporibus, repudiandae natus. Sapiente, eveniet?</p>
+        </div>
+    </div>
 </body>
+
 </html>

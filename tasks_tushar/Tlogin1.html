@@ -1,0 +1,108 @@
+v  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Tushar.html">
+    <link rel="stylesheet" href="./firstpage.html">
+
+    <title>Login</title>
+<style>
+    body{
+    background-image: url("html.jpg");  
+    background-attachment: fixed;  
+    background-repeat: no-repeat;
+    background-size: cover;
+        /* background-image: imagelinear-gradient(to left,rgba(160, 100, 100, 0.477), rgba(255, 18, 18, 0.669),rgba(182, 153, 153, 0.669)); */
+    }
+    .container{
+        background-color: #ab9a9a84;
+        height: 600px;
+        width: 500px;
+        margin: auto;  
+        padding-top: 5%;
+        border-radius: 10px;
+        box-shadow: 1px solid black; 
+        border-radius: 10%;
+    }
+    .h{
+        margin: auto;
+        padding: 50px 37%;
+        color: aliceblue;
+    }
+    .f{
+        color: azure;
+        padding-top: 50px;
+        padding-left:180px;
+        margin: 0px;
+    }
+    .p{
+        margin: auto;
+        padding: 5px 150px;
+        color: rgb(38, 38, 38);
+    }
+    .i{
+        margin-top: 20px;
+        margin-left: 30%;
+        background-color: #0909d600;
+        padding: 10px;        
+        border-radius:50px;
+        border: 2px solid blue;
+        color: black;
+    }
+    .r {
+        margin-left: 39%;    
+            background-color: #7d8c8542;
+            align-items: center;
+            padding: 5px 25px 5px 25px;
+            font-size: large;       
+            border-radius:50px;        
+            color: rgb(22, 22, 23);
+            align-items: center;
+            justify-content: center;
+    }
+    .r:hover{
+        background-color: #2e2b2bde;
+        color: aliceblue;
+    }
+    .link{
+        padding: 50px 25%;
+        color: rgb(0, 0, 0);
+    }
+    .forpass{
+        color:black;
+        padding-left: 37%;
+    }
+</style>
+</head>
+<body>
+    <img src="" alt="">
+    <div class="container">       
+        <form action="./firstpage.html" name="myForm" onsubmit="return validateForm()" method="post">
+        <h1 class="h">LOGIN</h1>
+        <p class="p">Please enter your Login here</p>
+       
+        <input class="i"name="uname" type="text" placeholder="Username">
+        <input class="i" name="pass" type="password" placeholder="Password">
+        
+        <a class="f" href="Forgot Password?" ><p class="forpass">Forgot password?</p></a>
+        <input class="r" type="submit" value="Login">
+        <p class="link">Don't have an account <a href="./Tregister.html"> Sign-up </a>here</p>
+    </form>
+    </div>
+    <script>
+         function validateForm() {
+            let x = document.forms["myForm"]["uname"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+            let y = document.forms["myForm"]["pass"].value;
+            if (y.length<=6) {
+                alert("password must contain atleast 6 digits");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
