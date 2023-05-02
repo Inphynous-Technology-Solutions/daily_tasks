@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="firstpage.css">
+    <title>first page</title>
+    
+</head>
+<body>   
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Inphynous</a></div>
+            <ul class="links">
+                <li><a href="Home">Home</a></li>
+                <li><a href="About">About</a></li>
+                <li><a href="Services">Services</a></li>
+                <li><a href="Contacts">Contacts</a></li>
+            </ul>
+            <a href="#" class="action_btn">Get-Started</a>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+        </div>
+        <div class="dropdown_menu ">  
+                <li><a href="hero">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="services">Services</a></li>
+                <li><a href="contact">Contacts</a></li>
+                <li><a href="#" class="action_btn">Get-Started</a></li>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Welcome To The World Of <span class="inphy"> <u>Inphynous</u> </span></h1>
+    </div>
+
+    <div class="mfooter">
+    <footer class="footer">
+        <h1 class="head">Get connected with us on social networks</h1>        
+        <div class="footer__contains">
+        <div class="Cname">
+            <h3> <u>COMPANY NAME.</u></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat placeat, incidunt amet facere sint doloremque dicta officiis inventore iste, magnam accusantium soluta voluptatem sit blanditiis quo earum quasi itaque nostrum.</p>
+        </div>
+
+        <div class="products">
+            <ul>
+                <h3> <u> PRODUCTS.</u></h3>
+                <li class="flist">MDBootstrap</li><br>
+                <li class="flist">MDWordpress</li><br>
+                <li class="flist">BrandFlow</li><br>
+                <li class="flist">Bootstrap Angular</li>
+            </ul>
+        </div>
+
+        <div class="links">
+            <ul>
+                <h3> <u> USEFUL LINK.</u></h3>
+                <li class="flist">Your Account</li><br>
+                <li class="flist">Become an Affiliate</li><br>
+                <li class="flist">Shipping Rates</li><br>
+                <li class="flist">Help</li>
+            </ul>
+        </div>
+
+            <div class="contact">
+                <ul>
+                    <h3> <u> CONTACS.</u></h3>
+                    <li class="flist">New York, NY 10012, us</li><br>
+                    <li class="flist">info@example.com</li><br>
+                    <li class="flist">+01 234 567 88</li><br>
+                    <li class="flist">+01 234 567 89</li>
+                </ul>
+            </div>
+        
+        </div>
+        
+        <div class="copy">
+            @copyright  MDBootstrap.com
+        </div>
+
+    </footer>
+</div>
+
+<script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+
+    toggleBtn.onclick = function() {
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+
+        toggleBtnIcon.classList = isOpen
+        ?'fa-solid fa-xmark'
+        :'fa-solid fa-bars'
+    }
+</script>
+</body>
+</html>
