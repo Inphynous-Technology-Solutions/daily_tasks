@@ -12,7 +12,7 @@
 <body>
     <div class="navbar">
         <li id="nav"><a href="example.php">Home</a></li>&nbsp;&nbsp;
-        <li id="nav"><a href="">Read</a></li>&nbsp;&nbsp;
+        <li id="nav"><a href="readData.php">Read</a></li>&nbsp;&nbsp;
         <li id="nav"><a href="edit.php">Update</a></li>&nbsp;&nbsp;
         <li id="nav"><a href="delete.php">Delete</a></li>
         <li id="nav"><a href="add.php">Add New Record</a></li>
@@ -55,8 +55,8 @@
     <div id="main-content">
         <h2>ALL records</h2>
         <?php
-        $conn = mysqli_connect("localhost", "root", "", "crud") or die("conection failed");
-        $sql = "SELECT * FROM student JOIN studentclass WHERE student.sclass=studentclass.cid";
+        $conn = mysqli_connect("localhost", "root", "", "testing") or die("conection failed");
+        $sql = "SELECT * FROM employee";
         $result = mysqli_query($conn, $sql) or die("query unsuccessful");
 
         if (mysqli_num_rows($result)) {
@@ -68,7 +68,6 @@
                     <th id="row">NAME</th>
                     <th id="row">ADDRESS</th>
                     <th id="row"> CLASS </th>
-                    <th id="row">PHONE</th>
                     <th id="row">ACTION</th>
                 </thead>
                 <tbody>
@@ -77,23 +76,20 @@
                     ?>
                         <tr>
                             <td id="row">
-                                <?php echo $row['sid'] ?>
+                                <?php echo $row['id'] ?>
                             </td>
                             <td id="row">
-                                <?php echo $row['sname'] ?>
+                                <?php echo $row['name'] ?>
                             </td>
                             <td id="row">
-                                <?php echo $row['saddress'] ?>
+                                <?php echo $row['salary'] ?>
                             </td>
                             <td id="row">
-                                <?php echo $row['cname'] ?>
+                                <?php echo $row['address'] ?>
                             </td>
+                           
                             <td id="row">
-                                <?php echo $row['sphone'] ?>
-                            </td>
-
-                            <td id="row">
-                                <a href="edit.php?id=<?php echo $row['sid'] ?>">Edit</a>
+                                <a href="edit.php?id=<?php echo $row['id'] ?>">Edit</a>
                                 <a href="delete.php">Delete</a>
                             </td>
                         </tr>

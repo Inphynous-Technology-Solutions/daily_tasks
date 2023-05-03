@@ -43,22 +43,18 @@
     <form action="savedata.php" method="POST">
         <div class="form-data">
             <label for="">First Name</label>
-            <input type="text" name="fname" required>
+            <input type="text" name="name" required>
         </div><br>
 
 
         <div class="form-data">
-            <label for="">Last Name</label>
-            <input type="text" name="lname" required>
+            <label for="">Salary</label>
+            <input type="number" name="salary" required>
         </div><br>
 
         <div class="form-data">
-            <label for="">Username</label>
-            <input type="text" name="username" required>
-        </div><br>
-        <div class="form-data">
-            <label for="">Password</label>
-            <input type="password" name="passwor" required>
+            <label for="">Address</label>
+            <input type="text" name="address" required>
         </div><br>
         <div class="form-data">
             <input type="submit" class="submit" value="Sign Up">
