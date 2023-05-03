@@ -20,7 +20,7 @@ if (isset($_POST['save'])) {
     $stu_class = mysqli_real_escape_string($conn, $_POST['username']);
     $stu_phone = mysqli_real_escape_string($conn, md5($_POST['passwor']));
 
-    $sql = "SELECT username FROM user WHERE Usernaem = {$$stu_class}";
+    $sql = "SELECT username FROM user WHERE Usernaem = {$stu_class}";
     $result = mysqli_query($conn, $sql) or die("Query Unsuccessful");
 
     if (mysqli_num_rows($result) > 0) {
