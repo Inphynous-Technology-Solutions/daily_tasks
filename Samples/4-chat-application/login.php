@@ -20,7 +20,6 @@
         <li id="nav" style="background-color: greenyellow;"><a href="login.php">login</a></li>
         <li id="nav"><a href="add.php">Sign Up</a></li>
     </div>
-
 </body>
 <h2 style="text-align: center;">login</h2>
 <div style="text-align: center;">
